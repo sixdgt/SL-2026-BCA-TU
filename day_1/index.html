@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Declaration</title>
+</head>
+<body>
+    <h1>Variable Declaration in JavaScript</h1>
+
+    <script>
+        var title = "Variable Declaration in JavaScript";
+        var description = "This is an example of how to declare variables in JavaScript using the var keyword.";
+        console.log("Title: " + title);
+        console.log("Description: " + description);
+
+        let name = "Nepal";
+        let capital = "Kathmandu";
+        let continent = "Asia";
+        console.log("Country: " + name);
+        console.log("Capital: " + capital);
+        console.log("Continent: " + continent);
+
+        if (name == "Nepal"){
+            console.log("Name of the country:" + name);
+            name = "India";
+            console.log("Name of the country:" + name);
+            // let name = "Bhutan";
+            console.log("Name of the country:" + name);
+            console.log("Title of the page:" + title);
+            title = "Variable Declaration in JavaScript - Updated";
+            console.log("Title of the page:" + title);
+            var title = "Variable Declaration in JavaScript - Var Updated";
+            console.log("Title of the page:" + title);
+        }
+
+        // undefined variable
+        let x;
+        console.log(x); // logs "undefined"
+
+        // in case of const, you must assign a value at the time of declaration, and it cannot be reassigned later.
+        const PI = 3.1428;
+        console.log(PI);
+
+        // referencing a variable before it is declared will result in a ReferenceError
+        try{
+            if (Math.random() > 0.5) {
+                const y = 5;
+            }
+            console.log(y); // ReferenceError: y is not defined
+        } catch (error) {        
+            console.error(error);
+        }
+
+        try{
+            if (Math.random() > 0.5) {
+                var z = 10;
+            }
+            console.log(z); // logs 10, because var is function-scoped and hoisted
+        } catch (error) {        
+            console.error(error);
+        }
+        console.log("Just testing the referencing value");
+
+        // THIS WILL CAUSE AN ERROR
+        function f() {}
+        const f = 5;
+
+        // THIS WILL CAUSE AN ERROR TOO
+        function f() {
+        const g = 5;
+        var g;
+        }
+    </script>
+</body>
+</html>

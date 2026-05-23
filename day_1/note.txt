@@ -1,0 +1,36 @@
+JavaScript has three kinds of variable declarations.
+
+var
+Declares a variable, optionally initializing it to a value.
+
+let
+Declares a block-scoped, local variable, optionally initializing it to a value.
+
+const
+Declares a block-scoped, read-only named constant.
+
+Variable scope
+A variable may belong to one of the following scopes:
+
+Global scope: The default scope for all code running in script mode.
+Module scope: The scope for code running in module mode.
+Function scope: The scope created with a function.
+In addition, variables declared with let or const can belong to an additional scope:
+
+Block scope: The scope created with a pair of curly braces (a block).
+
+
+
+Data types
+The latest ECMAScript standard defines eight data types:
+
+Seven data types that are primitives:
+
+Boolean. true and false.
+null. A special keyword denoting a null value. (Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.)
+undefined. A top-level property whose value is not defined.
+Number. An integer or floating point number. For example: 42 or 3.14159.
+BigInt. An integer with arbitrary precision. For example: 9007199254740992n.
+String. A sequence of characters that represent a text value. For example: "Howdy".
+Symbol. A data type whose instances are unique and immutable.
+and Object
