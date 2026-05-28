@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literals</title>
+</head>
+<body>
+    <h1>Array Literals in JavaScript</h1>
+    <p>An array literal is a way to create an array in JavaScript using square brackets. It allows you to define an array and its elements in a concise and readable manner.</p>
+
+    <h1>Numeric Literals in JavaScript</h1>
+    <p>A numeric literal is a value that represents a number in JavaScript.</p>
+    <!-- Array Literals -->
+    <script>
+        // array with empty slots
+        const myList = ["home", , "school"];
+        console.log(myList); // Output: ["home", empty, "school"]
+        console.log(myList[1]); // Output: undefined
+
+        // to add an element to the empty slot
+        myList[1] = "work";
+        console.log(myList); // Output: ["home", "work", "school"]
+        console.log(myList[1]);
+
+        // to check the length of the array
+        console.log(myList.length); // Output: 3
+
+        // first slot is empty
+        const myList2 = [, "home", , "school"];
+        console.log(myList2); // Output: [empty, "home", empty, "school"]
+        console.log(myList2.length); // Output: 4
+        // assigning a value to the first slot
+        myList2[0] = "work";
+        console.log(myList2); // Output: ["work", "home", empty, "school"]
+    </script>
+    <!-- Numeric Literals -->
+    <script>
+        // decimal literal
+        const decimalLiteral = 42;
+        console.log(decimalLiteral); // Output: 42
+
+        // hexadecimal literal
+        const hexLiteral = 0x2A; // 0x indicates hexadecimal
+        console.log(hexLiteral); // Output: 42
+
+        // octal literal
+        const octalLiteral = 0o52; // 0o indicates octal
+        console.log(octalLiteral); // Output: 42
+
+        // binary literal
+        const binaryLiteral = 0b101010; // 0b indicates binary
+        console.log(binaryLiteral); // Output: 42
+</body>
+</html>

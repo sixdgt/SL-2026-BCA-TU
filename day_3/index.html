@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literals in Java Script</title>
+</head>
+<body>
+    <h1> Literals in Java Script </h1>
+    <p> Literals are fixed values that are directly represented in the code. They can be of various types, such as numbers, strings, booleans, arrays, and objects. Here are some examples of literals in JavaScript:</p>
+    
+    <h1> Objects Literals</h1>
+    <p> Object literals are a way to define objects in JavaScript using a simple syntax. They consist of key-value pairs enclosed in curly braces {}. Here is an example of an object literal:</p>
+
+    <h1>String Literals</h1>
+    <p> String literals are a way to define strings in JavaScript. They can be enclosed in single quotes ('') or double quotes (""). Here is an example of a string literal:</p>
+
+    <script>
+        const person = {
+            name: "Rajesh Hamal", role: "Actor", industry: "Nepali Film Industry"
+        }
+        console.log("Person Details: " + person.name + ", " + person.role + ", " + person.industry);
+
+        const product = {
+            productTitle: "Fantech Mouse - h100",
+            price: 1536.50, 
+            category: "Computer Accessories", 
+            quantity: 12
+        }
+        console.log("Product Details: " + product.productTitle + ", " + product.price + ", " + product.category + ", " + product.quantity);
+
+        const student = [
+            {
+                name: "Sita Magar",
+                age: 22,
+                grade: "A+",
+                major: "Computer Science",
+                activities: {
+                sports: "Football",
+                clubs: "Coding Club",
+                volunteer: "Community Service",
+                achievements: {
+                    scholarship: "Full Scholarship",
+                    awards: "Best Student Award"
+                }
+            }}, {name: "Harish Chaudhary", 
+            age: 22, 
+            grade: "B+", 
+            major: "Managements",
+            activities: {
+                sports: "Football",
+                clubs: "Coding Club",
+                volunteer: "Community Service",
+                achievements: {
+                    scholarship: "Full Scholarship",
+                    awards: "Best Student Award"
+                }
+            }}, {name: "Himal Shrestha", 
+            age: 22, 
+            grade: "A+", 
+            major: "Computer Science",
+            activities: {
+                sports: "Football",
+                clubs: "Coding Club",
+                volunteer: "Community Service",
+                achievements: {
+                    scholarship: "Full Scholarship",
+                    awards: "Best Student Award"
+                }
+            }}]
+        console.log(student);
+        console.log("Student Details: " + student[0].name + ", " + student[0].age + ", " + student[0].grade + ", " + student[0].major);
+
+        console.log("Student Activities: " + student[0].activities.sports + ", " + student[0].activities.clubs + ", " + student[0].activities.volunteer);
+
+        console.log("Student Achievements: " + student[0].activities.achievements.scholarship + ", " + student[0].activities.achievements.awards);
+
+        const sales = "Toyota";
+
+        function carTypes(name) {
+        return name === "Honda" ? name : `Sorry, we don't sell ${name}.`;
+        }
+
+        const car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
+
+        console.log(car.myCar); // Saturn
+        console.log(car.getCar); // Honda
+        console.log(car.special); // Toyota
+
+
+
+    </script>
+
+    <script>
+        const name = "John";
+        const age = 30;
+        const city = "New York";
+
+        // Using template literals to create a string
+        const message = `My name is ${name}, I am ${age} years old, and I live in ${city}.`;
+
+        console.log(message);
+        console.log(name.length); // calling attributes
+        console.log(name); // displaying the value of name
+        console.log(name.toLowerCase()); // changing the case of name to lower case
+        console.log(name.toUpperCase()); // changing the case of name to upper case
+        console.log(name); // displaying the value of name again to show that it has not changed
+
+        // string template literals
+        // Basic literal string creation
+        `In JavaScript '\n' is a line-feed.`;
+
+        // Multiline strings
+        `In JavaScript, template strings can run
+        over multiple lines, but double and single
+        quoted strings cannot.`;
+
+        // String interpolation
+        const college = "DAV College";
+        const address = "Kathmandu, Nepal";
+        console.log(`${college} is located in ${address}`);
+        const time = "12:00 PM";
+        console.log(`Hello ${name}, how are you ${time}?`);
+    </script>
+</body>
+</html>
