@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Java Script</title>
+</head>
+<body>
+    <h1>Function in Java Script</h1>
+    <button onclick="alert(`Sum of two number: ${calculateSum(12, 45)}`)">Click me</button>
+    <br>
+    <button onclick="changeColor()">Click to see the color</button> <br><br><br>
+    <span id="hero" style="width: 100px; height: 200px; background-color: rebeccapurple; padding: 12px; top: 50%; position: relative; z-index: 100;">
+        this is just a sample code. click the above button to check my backgroun color.
+    </span>
+    <script>
+        // basic syntax of function in JavaScript
+        // defining function
+        function displayMessage(){
+            let title = "Function in Java Script";
+            console.log(`Message: ${title}`);
+            document.write(`Message: ${title}`);
+        }
+        // calling function
+        displayMessage();
+        // built-in function
+        alert("This is a built-in function.");
+
+        // using event to call function
+        function calculateSum(num_one, num_two){
+            let result = num_one + num_two;
+            return result;
+        }
+
+        // function with some extra logic to check and perform some task
+        function userRole(user, role){
+            if (role == "user"){
+                document.write(`<br/>Welcome to the user dashboard, ${user}`);
+            } else if (role == "admin"){
+                document.write(`<br/>Welcome to the admin dashboard, ${user}`);
+            } else if (role == "staff"){
+                document.write(`<br/>Welcome to the staff dashboard, ${user}`);
+            } else {
+                document.write(`<br/>Welcome to the guest dashboard, ${user}`);
+            }
+        }
+        // change the role: user/admin/staff/guest
+        userRole("DAV staff", "staff");
+
+        // changing color
+        function changeColor(){
+            const heroElement = document.getElementById("hero");
+            heroElement.style.backgroundColor = "#336a99";
+            heroElement.style.fontSize = "20px";
+            heroElement.style.fontFamily = "sans-serif";
+            heroElement.style.fontStyle = "italic";
+        }
+    </script>
+</body>
+</html>

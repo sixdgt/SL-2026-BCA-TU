@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function in Java Script</title>
+</head>
+<body>
+    <h1>Anonymous Function in Java Script</h1>
+    <p>An anonymous function is a function that does not have a name. It is often used as a callback function or as an argument to another function. Anonymous functions can be defined using the function keyword or using arrow function syntax.</p>
+    <h2>Function Expression</h2>
+
+    <script>
+        function addSquares(a, b) {
+            function square(x) {
+                return x * x;
+            }
+            return square(a) + square(b);
+        }
+
+        const result = addSquares(4, 5);
+        console.log("Sum of Squares: " + result);
+
+        // function expression
+
+        const factorial = function fac(n) {
+            return n < 2 ? 1 : n * fac(n - 1);
+        };
+
+        console.log(factorial(5)); // 120
+
+        // here: f in a function whereas a is an array. The map function applies the function f to each element of the array a and returns a new array with the results.
+        function map(f, a) {
+            const result = new Array(a.length);
+            for (let i = 0; i < a.length; i++) {
+                result[i] = f(a[i]);
+            }
+            return result;
+        }
+
+        const numbers = [0, 1, 2, 5, 10];
+        const cubedNumbers = map(function (x) {
+            return x * x * x;
+        }, numbers);
+        console.log(cubedNumbers); // [0, 1, 8, 125, 1000]
+    </script>
+</body>
+</html>
