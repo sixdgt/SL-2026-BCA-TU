@@ -12,16 +12,19 @@ form.addEventListener('submit', function(event) {
     
     if(password !== confirmPassword) {
         message.textContent = 'Passwords do not match.';
+        message.classList.remove('success'); // existing success class removed if any
         message.classList.add('error');
         return;
     } 
 
     if (firstName && lastName && email && password) {
         message.textContent = `Welcome, ${firstName} ${lastName}! Your registration is successful.`;
-        message.classList.add('success');
+        message.classList.remove('error'); // existing error class removed if any
+        message.classList.add('success'); // success class added for styling
         form.reset(); // Clear the form after successful submission
     } else {
         message.textContent = 'Please fill in all fields.';
+        message.classList.remove('success'); // existing success class removed if any
         message.classList.add('error');
     }
 });

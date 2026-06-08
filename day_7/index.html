@@ -6,26 +6,28 @@
     <title>Form Handling Exercise in JavaScript</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="alert(`Welcome to Form Handling Exercise in JavaScript! Please fill out the form and submit it to see the results.`)">
     <section class="container">
         <h1>Form Handling Exercise in JavaScript</h1>
-            <form id="login">
-                <label>First Name: </label>
-                <input type="text" name="first_name" id="firstName">
-                <label>Last Name: </label>
-                <input type="text" name="last_name" id="lastName">
-                <label>Email: </label>
-                <input type="email" name="email" id="email">
-                <label>Password: </label>
-                <input type="password" name="password" id="password">
-                <label>Confirm Password: </label>
-                <input type="password" name="confirm_password" id="confirmPassword">
-                <input type="submit" value="Register" id="submitBtn">
-            </form>
-            <br>
-            <span id="message"></span>
-            <section id="output">
-            </section>
+        <form id="login">
+            <label>First Name: </label>
+            <input type="text" name="first_name" id="firstName">
+            <label>Last Name: </label>
+            <input type="text" name="last_name" id="lastName">
+            <label>Email: </label>
+            <input type="email" name="email" id="email">
+            <label>Password: </label>
+            <input type="password" name="password" id="password">
+            <label>Confirm Password: </label>
+            <input type="password" name="confirm_password" id="confirmPassword">
+            <input type="submit" value="Register" id="submitBtn">
+        </form>
+        <br>
+        <span id="message">
+
+        </span>
+    </section>
+    <section id="output">
     </section>
     <script src="script.js"></script>
 </body>
