@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model Examples</title>
+</head>
+<body>
+    <!-- Selecting Elements -->
+    <!-- 5 h1 tags -->
+    <h1>Heading 1 - Welcome</h1>
+    <h1>Heading 2 - About</h1>
+    <h1>Heading 3 - Services</h1>
+    <h1>Heading 4 - Portfolio</h1>
+    <h1>Heading 5 - Contact</h1>
+
+    <!-- 10 p tags -->
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+    <p>This is paragraph 4.</p>
+    <p>This is paragraph 5.</p>
+    <p>This is paragraph 6.</p>
+    <p>This is paragraph 7.</p>
+    <p>This is paragraph 8.</p>
+    <p>This is paragraph 9.</p>
+    <p>This is paragraph 10.</p>
+
+    <!-- 10 span tags -->
+    <span>This is span 1.</span><br>
+    <span>This is span 2.</span><br>
+    <span>This is span 3.</span><br>
+    <span>This is span 4.</span><br>
+    <span>This is span 5.</span><br>
+    <span>This is span 6.</span><br>
+    <span>This is span 7.</span><br>
+    <span>This is span 8.</span><br>
+    <span>This is span 9.</span><br>
+    <span>This is span 10.</span>
+
+    <!-- tags with class name -->
+     <div class="demo container">
+        <h3>This is demo one</h3>
+        <p>This is a demo paragraph.</p>
+     </div>
+     <div class="demo">
+        <h3>This is demo two</h3>
+     </div>
+     <div class="demo">
+        <h3>This is demo three</h3>
+     </div>
+     <div class="demo container">
+        <h3>This is demo four</h3>
+     </div>
+     <div class="demo">
+        <h3>This is demo five</h3>
+     </div>
+
+    <script>
+        // selecting elements by querySelector
+        const firstHeading = document.querySelector('h1');
+        console.log('First Heading:', firstHeading);
+        // selecting content of tag
+        console.log('First Heading Text:', firstHeading.textContent);
+
+        // selecting all elements by querySelectorAll
+        const allHeadings = document.querySelectorAll('h1');
+        console.log('All Headings:', allHeadings);
+
+        const allSpans = document.querySelectorAll('span');
+        console.log('All Spans:', allSpans);
+
+        // selecting any one of the element from querySelectorAll
+        const secondHeading = allHeadings[1];
+        console.log('Second Heading:', secondHeading);
+
+        // selecting elements by class name with querySelectorAll
+        const demoElements = document.querySelectorAll('.demo');
+        console.log('Demo Elements:', demoElements);
+
+        // selecting only container class elements with querySelectorAll
+        const containerElements = document.querySelectorAll('.container');
+        console.log('Container Elements:', containerElements);
+
+        // selecting elements by class name with getElementsByClassName
+        const demoElementsByClass = document.getElementsByClassName('demo');
+        console.log('Demo Elements by Class Name:', demoElementsByClass);
+
+        // selecting only container class elements with getElementsByClassName
+        const containerElementsByClass = document.getElementsByClassName('container');
+        console.log('Container Elements by Class Name:', containerElementsByClass);
+
+        // selecting elements by tag name with getElementsByTagName
+        const allParagraphs = document.getElementsByTagName('p');
+        console.log('All Paragraphs:', allParagraphs);
+    </script>
+</body>
+</html>
